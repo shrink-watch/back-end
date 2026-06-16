@@ -1,7 +1,12 @@
 package com.example.demo.repository;
 
-import com.example.demo.entity.report;
+import com.example.demo.entity.Report;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ReportRepository extends JpaRepository<report, Long> {
+import java.util.List;
+
+public interface ReportRepository extends JpaRepository<Report, Long> {
+
+    // 제보 피드: 최신순 정렬
+    List<Report> findAllByOrderByCreatedAtDesc();
 }

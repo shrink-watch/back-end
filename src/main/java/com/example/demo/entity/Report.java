@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor
 @Table(name = "reports")
-public class report {
+public class Report {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +23,11 @@ public class report {
     private String content;
 
     private LocalDateTime createdAt;
+
+    public Report(String productName, String content) {
+        this.productName = productName;
+        this.content = content;
+    }
 
     @PrePersist
     public void prePersist() {
