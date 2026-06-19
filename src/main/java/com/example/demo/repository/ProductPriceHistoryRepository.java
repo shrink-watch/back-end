@@ -1,0 +1,10 @@
+package com.example.demo.repository;
+
+import com.example.demo.entity.ProductPriceHistory;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ProductPriceHistoryRepository extends JpaRepository<ProductPriceHistory,Long> {
+    public List<ProductPriceHistory> findAllByProductId(Long id);
+}
