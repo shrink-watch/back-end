@@ -1,6 +1,8 @@
 package com.example.demo.dto;
 
+import com.example.demo.entity.AlternativeProduct;
 import com.example.demo.entity.Product;
+import com.example.demo.entity.ProductPriceHistory;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
@@ -26,17 +28,21 @@ public class ProductDetailResponse {
 
     private final Double rating;
 
-    private final List<Object> chartData;
-    private final List<Object> alternativeProducts;
+    private final List<ChartDataResponse> chartData;
+    private final List<AlternativeSearchResponse> alternativeProducts;
 
-    public ProductDetailResponse(Product p) {
+    public ProductDetailResponse(Product p, List<ProductPriceHistory> chartData, List<AlternativeProduct> alternativeProducts) {
         this.id = p.getId();
         this.name = p.getName();
         this.price = p.getPrice();
         this.unitPriceText = p.getUnitPriceText();
         this.isDetected = p.getIsDetected();
         this.rating = p.getRating();
-        this.chartData = Collections.emptyList();
-        this.alternativeProducts = Collections.emptyList();
+        this.chartData = chartData.stream()
+                .map(ChartDataResponse::new)
+                .toList();
+        this.alternativeProducts = alternativeProducts.stream()
+                .map(AlternativeSearchResponse::new)
+                .toList();
     }
 }
