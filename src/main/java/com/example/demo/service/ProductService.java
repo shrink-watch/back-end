@@ -45,6 +45,37 @@ public class ProductService {
         return new ProductDetailResponse(product,chartDataList,alternativeProductList);
     }
 
+    public List<ProductSearchResponse> findProductByCategory(Long id){
+        List<Product> products=productRepository.findByCategoryId(id);
+        return products.stream()
+                .map(ProductSearchResponse::new)
+                .toList();
+    }
+
+    public List<ProductSearchResponse> findByInflationDesc(){
+        return productRepository.findTop10ByOrderByInflationRateDesc().stream()
+                .map(ProductSearchResponse::new)
+                .toList();
+    }
+
+    public List<ProductSearchResponse> findByInflation(){
+        return productRepository.findTop10ByInflationRateOrderByRatingDesc(0.0).stream()
+                .map(ProductSearchResponse::new)
+                .toList();
+    }
+
+    public List<ProductSearchResponse> findshrinkflation(){
+        return productRepository.findTop10ByIsCapacityDecreasedTrueOrderByInflationRateDesc().stream()
+                .map(ProductSearchResponse::new)
+                .toList();
+    }
+
+    public List<ProductSearchResponse> findDetectedProduct(){
+        return productRepository.findDetectedproducts().stream()
+                .map(ProductSearchResponse::new)
+                .toList();
+    }
+
     private boolean isBarcode(String keyword) {
         return keyword.matches("\\d{13}");
     }

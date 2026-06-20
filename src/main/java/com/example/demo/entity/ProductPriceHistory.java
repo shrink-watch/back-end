@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.repository.cdi.Eager;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @NoArgsConstructor
@@ -15,12 +17,15 @@ public class ProductPriceHistory {
     private Long id;
 
     @ManyToOne (fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "product_id")
     private Product product;
 
-    private String date;
+    private LocalDateTime date;
 
     private Integer normalPrice;
 
     private Integer unitPrice;
+
+    private Integer pastCapacity;
+
 }

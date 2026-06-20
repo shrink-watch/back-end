@@ -28,4 +28,28 @@ public class ProductController {
     public ProductDetailResponse getDetail(@PathVariable Long id) {
         return productService.getDetail(id);
     }
+
+    // 3. 카테고리별 검색
+    @GetMapping("/search/category/{id}")
+    public List<ProductSearchResponse> getProductByCategory(@PathVariable Long id){
+        return productService.findProductByCategory(id);
+    }
+
+    // 4. 실질 단가 상승률 TOP 10
+    @GetMapping("/search/ranking/inflation")
+    public List<ProductSearchResponse> getInflationProduct(){
+        return productService.findByInflationDesc();
+    }
+
+    // 5. 용량감소 슈링크플레이션 상품 TOP10
+    @GetMapping("/search/ranking/capacity")
+    public List<ProductSearchResponse> getShrinkflation(){
+        return productService.findshrinkflation();
+    }
+
+    // 6. 가격동결 상승률 0%인것 TOP10
+    @GetMapping("/search/ranking/solid")
+    public List<ProductSearchResponse> getNoInflation(){
+        return productService.findByInflation();
+    }
 }

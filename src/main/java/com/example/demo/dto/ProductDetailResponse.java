@@ -31,6 +31,8 @@ public class ProductDetailResponse {
     private final List<ChartDataResponse> chartData;
     private final List<AlternativeSearchResponse> alternativeProducts;
 
+    private final String categoryName;
+
     public ProductDetailResponse(Product p, List<ProductPriceHistory> chartData, List<AlternativeProduct> alternativeProducts) {
         this.id = p.getId();
         this.name = p.getName();
@@ -44,5 +46,6 @@ public class ProductDetailResponse {
         this.alternativeProducts = alternativeProducts.stream()
                 .map(AlternativeSearchResponse::new)
                 .toList();
+        this.categoryName=p.getCategory().getName();
     }
 }

@@ -29,4 +29,12 @@ public class Product {
     private Integer annualDamageCost;
 
     private Double inflationRate;
+
+    private Boolean isCapacityDecreased;
+
+    private Integer capacity;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn( name = "id")
+    private Category category;
 }
