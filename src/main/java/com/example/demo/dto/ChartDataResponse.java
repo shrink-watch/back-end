@@ -1,16 +1,18 @@
 package com.example.demo.dto;
 
 import com.example.demo.entity.ProductPriceHistory;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.time.format.DateTimeFormatter;
 
 @Getter
-@AllArgsConstructor
 public class ChartDataResponse {
     private String date;
+    @JsonProperty("normal_price")
     private Integer normalPrice;
+    @JsonProperty("unit_price")
     private Integer unitPrice;
 
     // 차트 X축 표기용 포맷 (예: "24.01")
