@@ -8,9 +8,13 @@ spring:
     hibernate:
       ddl-auto: create
     show-sql: true
+    defer-datasource-initialization: true   # JPA 테이블 생성 후 data.sql 실행
     properties:
       hibernate:
         format_sql: true
+  sql:
+    init:
+      mode: always   # data.sql 항상 실행
 
 server:
   port: 8080
