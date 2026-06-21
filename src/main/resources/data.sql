@@ -86,12 +86,57 @@ INSERT INTO product_price_histories (product_id, date, normal_price, unit_price,
   (201, '2025-06-15 00:00:00', 30000, 1000, 30);
 
 -- 4) 착한 대안상품 (상세페이지 우측) ---------------------------------
+-- 모든 상품이 같은 카테고리의 정직한 대안 2개씩을 갖도록 구성
 INSERT INTO alternative_products (product_id, name, price, unit_price_text, rating, url) VALUES
-  (101, '착한 손만두 (냉동식품)', 12000, '10g당 550원',  4.3, 'https://www.coupang.com/vp/products/mock-101a'),
-  (101, '집밥 물만두',            9000,  '10g당 600원',  4.0, 'https://www.coupang.com/vp/products/mock-101b'),
-  (101, '왕교자 대용량',          13000, '10g당 520원',  4.4, 'https://www.coupang.com/vp/products/mock-101c'),
-  (501, '정직한 봉지라면 5입',    3500,  '100g당 700원', 4.2, 'https://www.coupang.com/vp/products/mock-501a'),
-  (502, '알뜰 감자칩 대용량',     2900,  '100g당 1200원',4.1, 'https://www.coupang.com/vp/products/mock-502a');
+  -- 냉동식품
+  (101, '착한 손만두 대용량',   12000, '10g당 550원',  4.3, 'https://www.coupang.com/np/search?q=손만두'),
+  (101, '집밥 물만두',          9000,  '10g당 600원',  4.0, 'https://www.coupang.com/np/search?q=물만두'),
+  (102, '정직한 핫도그 6입',    8000,  '10g당 360원',  4.2, 'https://www.coupang.com/np/search?q=핫도그'),
+  (102, '수제 콘도그',          7500,  '10g당 380원',  4.1, 'https://www.coupang.com/np/search?q=콘도그'),
+  (103, '화덕 피자 라지',       11000, '10g당 280원',  4.4, 'https://www.coupang.com/np/search?q=냉동피자'),
+  (104, '큰그릇 볶음밥',        6000,  '10g당 220원',  4.2, 'https://www.coupang.com/np/search?q=볶음밥'),
+  (105, '왕교자 1kg',           11000, '10g당 320원',  4.3, 'https://www.coupang.com/np/search?q=왕교자'),
+  (106, '들기름 손만두',        12500, '10g당 540원',  4.4, 'https://www.coupang.com/np/search?q=손만두'),
+  -- 건강식품
+  (201, '6년근 홍삼스틱',       32000, '1포당 950원',  4.5, 'https://www.coupang.com/np/search?q=홍삼'),
+  (201, '홍삼 농축액',          28000, '1포당 900원',  4.3, 'https://www.coupang.com/np/search?q=홍삼정'),
+  (202, '고함량 비타민C',       16000, '1정당 45원',   4.4, 'https://www.coupang.com/np/search?q=비타민C'),
+  (203, 'rTG 오메가3',          24000, '1정당 170원',  4.3, 'https://www.coupang.com/np/search?q=오메가3'),
+  (204, '눈건강 루테인',        19000, '1정당 180원',  4.2, 'https://www.coupang.com/np/search?q=루테인'),
+  (205, '생유산균 30포',        26000, '1포당 800원',  4.5, 'https://www.coupang.com/np/search?q=유산균'),
+  -- 헬스/다이어트
+  (301, '저당 단백질바',        2000,  '100g당 3400원',4.3, 'https://www.coupang.com/np/search?q=단백질바'),
+  (302, 'WPI 프로틴',           40000, '100g당 1200원',4.4, 'https://www.coupang.com/np/search?q=프로틴'),
+  (303, '제로 곤약젤리',        1300,  '100g당 750원', 4.0, 'https://www.coupang.com/np/search?q=곤약젤리'),
+  (304, '저염 닭가슴살',        2700,  '100g당 240원', 4.3, 'https://www.coupang.com/np/search?q=닭가슴살'),
+  (305, '무가당 그래놀라',      7200,  '100g당 1300원',4.2, 'https://www.coupang.com/np/search?q=그래놀라'),
+  -- 생수/음료/주류
+  (401, '무라벨 생수 2L',       900,   '1L당 450원',   4.3, 'https://www.coupang.com/np/search?q=생수'),
+  (402, '제로 콜라',            2100,  '100ml당 78원', 4.2, 'https://www.coupang.com/np/search?q=콜라'),
+  (403, '착즙 오렌지주스',      3800,  '100ml당 340원',4.3, 'https://www.coupang.com/np/search?q=오렌지주스'),
+  (404, '저칼로리 이온음료',    1600,  '100ml당 72원', 4.1, 'https://www.coupang.com/np/search?q=이온음료'),
+  (405, '국산 보리차',          3000,  '1L당 1350원',  4.4, 'https://www.coupang.com/np/search?q=보리차'),
+  -- 커피/차/다과
+  (501, '정직한 봉지라면 5입',  3500,  '100g당 700원', 4.2, 'https://www.coupang.com/np/search?q=라면'),
+  (501, '큰컵 우동',            1800,  '100g당 900원', 4.1, 'https://www.coupang.com/np/search?q=우동'),
+  (502, '알뜰 감자칩 대용량',   2900,  '100g당 1200원',4.1, 'https://www.coupang.com/np/search?q=감자칩'),
+  (502, '오징어칩 빅사이즈',    2500,  '100g당 1100원',4.0, 'https://www.coupang.com/np/search?q=오징어칩'),
+  (503, '원두 아메리카노',      4200,  '1잔당 420원',  4.5, 'https://www.coupang.com/np/search?q=아메리카노'),
+  (504, '수제 초코쿠키',        3000,  '100g당 1500원',4.2, 'https://www.coupang.com/np/search?q=쿠키'),
+  (505, '유기농 녹차',          5200,  '1개당 230원',  4.3, 'https://www.coupang.com/np/search?q=녹차'),
+  (507, '현미 누룽지',          2100,  '100g당 950원', 4.2, 'https://www.coupang.com/np/search?q=누룽지'),
+  -- 우유/유제품
+  (601, '1A 등급 우유',         2700,  '1L당 2700원',  4.4, 'https://www.coupang.com/np/search?q=우유'),
+  (602, '그릭 요거트',          1600,  '100g당 360원', 4.3, 'https://www.coupang.com/np/search?q=요거트'),
+  (603, '자연치즈 슬라이스',    6000,  '100g당 2400원',4.2, 'https://www.coupang.com/np/search?q=치즈'),
+  (604, '무염 버터',            5000,  '100g당 2000원',4.1, 'https://www.coupang.com/np/search?q=버터'),
+  (605, '국산콩 두유',          3000,  '1L당 1500원',  4.4, 'https://www.coupang.com/np/search?q=두유'),
+  -- 분유/이유식
+  (701, '프리미엄 분유',        26000, '100g당 3000원',4.6, 'https://www.coupang.com/np/search?q=분유'),
+  (702, '유기농 쌀이유식',      3800,  '100g당 560원', 4.3, 'https://www.coupang.com/np/search?q=이유식'),
+  (703, '무첨가 과일퓨레',      2400,  '100g당 420원', 4.3, 'https://www.coupang.com/np/search?q=과일퓨레'),
+  (704, '아기치즈 무염',        5800,  '1개당 350원',  4.2, 'https://www.coupang.com/np/search?q=아기치즈'),
+  (705, '쌀과자 무설탕',        1900,  '100g당 850원', 4.3, 'https://www.coupang.com/np/search?q=유아과자');
 
 -- 5) 시민 제보 (피드) ------------------------------------------------
 -- status=APPROVED 만 공개 피드(GET /api/reports)에 노출, PENDING은 관리자 대기목록에만
