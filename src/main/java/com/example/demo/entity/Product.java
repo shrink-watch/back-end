@@ -34,6 +34,8 @@ public class Product {
 
     private Integer capacity;
 
+    private String imageUrl;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;

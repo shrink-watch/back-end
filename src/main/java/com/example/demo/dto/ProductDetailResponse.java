@@ -33,6 +33,9 @@ public class ProductDetailResponse {
 
     private final String categoryName;
 
+    @JsonProperty("image_url")
+    private final String imageUrl;
+
     public ProductDetailResponse(Product p, List<ProductPriceHistory> chartData, List<AlternativeProduct> alternativeProducts) {
         this.id = p.getId();
         this.name = p.getName();
@@ -47,5 +50,6 @@ public class ProductDetailResponse {
                 .map(AlternativeSearchResponse::new)
                 .toList();
         this.categoryName = p.getCategory() != null ? p.getCategory().getName() : null;
+        this.imageUrl = p.getImageUrl();
     }
 }

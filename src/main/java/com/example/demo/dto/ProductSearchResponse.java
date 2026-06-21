@@ -30,6 +30,9 @@ public class ProductSearchResponse {
 
     private final String categoryName;
 
+    @JsonProperty("image_url")
+    private final String imageUrl;
+
 
     public ProductSearchResponse(Product p) {
         this.id = p.getId();
@@ -41,5 +44,6 @@ public class ProductSearchResponse {
         this.annualDamageCost = p.getAnnualDamageCost();
         this.inflationRate = p.getInflationRate();
         this.categoryName = p.getCategory() != null ? p.getCategory().getName() : null;
+        this.imageUrl = p.getImageUrl();
     }
 }
