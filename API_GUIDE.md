@@ -51,7 +51,10 @@
   "categoryName": "냉동식품",
   "chartData": [
     { "date": "24.01", "normalPrice": 9000, "unitPrice": 620 },
-    { "date": "25.06", "normalPrice": 10000, "unitPrice": 690 }
+    { "date": "24.04", "normalPrice": 10000, "unitPrice": 690 },
+    { "date": "24.07", "normalPrice": 10000, "unitPrice": 690 },
+    { "date": "24.10", "normalPrice": 10000, "unitPrice": 690 },
+    { "date": "25.01", "normalPrice": 11000, "unitPrice": 720 },
   ],
   "alternativeProducts": [
     {
