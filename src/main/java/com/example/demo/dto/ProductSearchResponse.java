@@ -40,6 +40,6 @@ public class ProductSearchResponse {
         this.isDetected = p.getIsDetected();
         this.annualDamageCost = p.getAnnualDamageCost();
         this.inflationRate = p.getInflationRate();
-        this.categoryName=p.getCategory().getName();
+        this.categoryName = p.getCategory() != null ? p.getCategory().getName() : null;
     }
 }

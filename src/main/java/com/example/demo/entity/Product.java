@@ -35,6 +35,6 @@ public class Product {
     private Integer capacity;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn( name = "id")
+    @JoinColumn(name = "category_id")
     private Category category;
 }

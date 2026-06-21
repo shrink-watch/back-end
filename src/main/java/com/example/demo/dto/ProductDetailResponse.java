@@ -46,6 +46,6 @@ public class ProductDetailResponse {
         this.alternativeProducts = alternativeProducts.stream()
                 .map(AlternativeSearchResponse::new)
                 .toList();
-        this.categoryName=p.getCategory().getName();
+        this.categoryName = p.getCategory() != null ? p.getCategory().getName() : null;
     }
 }

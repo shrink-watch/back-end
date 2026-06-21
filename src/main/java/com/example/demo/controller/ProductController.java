@@ -52,4 +52,10 @@ public class ProductController {
     public List<ProductSearchResponse> getNoInflation(){
         return productService.findByInflation();
     }
+
+    // 7. 소비자원 적발(검증완료) 상품
+    @GetMapping("/search/ranking/detected")
+    public List<ProductSearchResponse> getDetectedProduct(){
+        return productService.findDetectedProduct();
+    }
 }
