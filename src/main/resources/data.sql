@@ -22,7 +22,7 @@ INSERT INTO products
   (id, name, barcode, price, unit_price_text, is_detected, rating, annual_damage_cost, inflation_rate, is_capacity_decreased, capacity, category_id, image_url) VALUES
   -- 냉동식품 (cat 1)
   (101, '국민 만두 (냉동식품)',     '8801000000001', 10000, '10g당 690원',  TRUE,  3.5, 5000, 11.3, TRUE,  350, 1, 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=400'),
-  (102, '바삭 핫도그 (냉동식품)',   '8801000000002', 7000,  '10g당 400원',  FALSE, 3.9, 2200, 6.5,  TRUE,  300, 1, 'https://images.unsplash.com/photo-1612392062798-2dccbf12a0e3?w=400'),
+  (102, '바삭 핫도그 (냉동식품)',   '8801000000002', 7000,  '10g당 400원',  FALSE, 3.9, 2200, 6.5,  TRUE,  300, 1, 'https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=400'),
   (103, '치즈 피자 (냉동식품)',     '8801000000003', 8900,  '10g당 320원',  TRUE,  3.7, 2800, 7.2,  TRUE,  400, 1, 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400'),
   (104, '새우 볶음밥 (냉동식품)',   '8801000000004', 5500,  '10g당 250원',  FALSE, 4.1, 1500, 5.0,  TRUE,  450, 1, 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400'),
   (105, '군만두 (냉동식품)',        '8801000000005', 6800,  '10g당 340원',  FALSE, 4.0, 1800, 6.0,  TRUE,  380, 1, 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=400'),
@@ -31,12 +31,12 @@ INSERT INTO products
   -- 건강식품 (cat 2)
   (201, '홍삼정 (건강식품)',        '8802000000001', 30000, '1포당 1000원', FALSE, 4.4, 3000, 7.0,  TRUE,  30,  2, 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400'),
   (202, '비타민C (건강식품)',       '8802000000002', 15000, '1정당 50원',   FALSE, 4.2, 1200, 4.5,  TRUE,  300, 2, 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=400'),
-  (203, '오메가3 (건강식품)',       '8802000000003', 22000, '1정당 180원',  TRUE,  4.0, 2000, 6.3,  TRUE,  120, 2, 'https://images.unsplash.com/photo-1550572017-edd951aa8f7f?w=400'),
+  (203, '오메가3 (건강식품)',       '8802000000003', 22000, '1정당 180원',  TRUE,  4.0, 2000, 6.3,  TRUE,  120, 2, 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400'),
   (204, '루테인 (건강식품)',        '8802000000004', 18000, '1정당 200원',  FALSE, 4.1, 900,  3.8,  TRUE,  90,  2, 'https://images.unsplash.com/photo-1626197031507-c17099753214?w=400'),
   (205, '유산균 (건강식품)',        '8802000000005', 25000, '1포당 833원',  FALSE, 4.5, 0,    0.0,  FALSE, 30,  2, 'https://images.unsplash.com/photo-1556909211-36987daf7b4d?w=400'),
 
   -- 헬스/다이어트 (cat 3)
-  (301, '단백질바 (헬스/다이어트)', '8803000000001', 1800,  '100g당 3600원', TRUE,  3.6, 1500, 8.8, TRUE, 50,  3, 'https://images.unsplash.com/photo-1622484211148-4d4c69e4b69c?w=400'),
+  (301, '단백질바 (헬스/다이어트)', '8803000000001', 1800,  '100g당 3600원', TRUE,  3.6, 1500, 8.8, TRUE, 50,  3, 'https://images.unsplash.com/photo-1571748982800-fa51082c2224?w=400'),
   (302, '프로틴 파우더 (헬스/다이어트)','8803000000002', 38000,'100g당 1267원', FALSE, 4.3, 2500, 5.5, TRUE, 3000, 3, 'https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=400'),
   (303, '곤약 젤리 (헬스/다이어트)','8803000000003', 1200,  '100g당 800원',  FALSE, 3.9, 600,  4.0, TRUE, 150, 3, 'https://images.unsplash.com/photo-1564093497595-593b96d80180?w=400'),
   (304, '닭가슴살 (헬스/다이어트)', '8803000000004', 2500,  '100g당 250원',  FALSE, 4.2, 1000, 5.2, TRUE, 1000, 3, 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400'),
@@ -67,7 +67,7 @@ INSERT INTO products
   -- 분유/이유식 (cat 7)
   (701, '튼튼 분유 (분유/이유식)',  '8807000000001', 25000, '100g당 3125원', FALSE, 4.6, 0,   0.0, FALSE, 800, 7, 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=400'),
   (702, '쌀 이유식 (분유/이유식)',  '8807000000002', 3500,  '100g당 583원',  TRUE,  4.0, 600, 5.0, TRUE,  600, 7, 'https://images.unsplash.com/photo-1607330289024-1535c6b4e1c1?w=400'),
-  (703, '과일 퓨레 (분유/이유식)',  '8807000000003', 2200,  '100g당 440원',  FALSE, 4.2, 400, 3.5, TRUE,  500, 7, 'https://images.unsplash.com/photo-1568909344808-d3d6f47fa8c4?w=400'),
+  (703, '과일 퓨레 (분유/이유식)',  '8807000000003', 2200,  '100g당 440원',  FALSE, 4.2, 400, 3.5, TRUE,  500, 7, 'https://images.unsplash.com/photo-1570696516188-ade861b84a49?w=400'),
   (704, '아기 치즈 (분유/이유식)',  '8807000000004', 5500,  '1개당 367원',   FALSE, 4.1, 0,   0.0, FALSE, 270, 7, 'https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400'),
   (705, '유아 과자 (분유/이유식)',  '8807000000005', 1800,  '100g당 900원',  FALSE, 4.3, 300, 2.8, TRUE,  200, 7, 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400');
 
